@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <nav>
+        <div id="container-nav">
+            <div id="nav-left">
+                <a href="index.html"><img src="./logo.png" ></a>
+            </div>
+            <div id="nav-right" onclick="mostrarEscolha()">
+                <span class="material-symbols-outlined branco">
+                    menu
+                </span>
+            </div>
+        </div>
+    </nav>
+    <div id="escolha">
+        <a href="index.html" class="itens borderd">Registrar</a>
+        <a href="consulta.html" class="itens borderl">Consultar</a>
+    </div>
+
+    
+<aside>
+    <div id="container">
+        <div id="titulo">Registro de nova despesa</div>
+        <div id="inputs">
+        
+            <div class="linhas">
+            <select id="ano" class="formulario">
+                <option value="">Ano</option>
+                <option value="2024">2024</option>
+            </select>
+
+            <select id="mes" class="formulario">
+                <option value="">Mês</option>
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+
+            <input type="text" class="formulario" placeholder="Dia" id="dia">
+
+            <select class="formulario alongar" id="tipo" >
+                <option value="">Tipo</option>
+                <option value="1">Alimentação</option>
+                <option value="2">Educação</option>
+                <option value="3">Lazer</option>
+                <option value="4">Saúde</option>
+                <option value="5">Transporte</option>
+              </select>
+                </div>
+
+                <div class="linhas">
+              <input type="text" class="formulario alongarMais" placeholder="Descrição" id="descricao">
+
+              <input type="text" class="formulario " placeholder="Valor" id="valor">
+
+              <button class="final" onclick="cadastrarDespesa()">+</button>
+                </div>
+        </div>
+    </div>
+</aside>
+
+<dialog id="modal">
+
+    <h2  id="modal-titulo"></h2>
+    <hr>
+    <p id="modal-info"></p>
+    <hr>
+    <button id="modal-button" onclick="modal.close( )"></button>
+
+</dialog>
+
+</body>
+<script src="script.js"></script>
+</html>
